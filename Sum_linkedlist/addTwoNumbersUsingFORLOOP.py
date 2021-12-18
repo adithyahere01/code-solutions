@@ -1,0 +1,19 @@
+  def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+         s1,s2=0,0
+        
+         while l1:
+                s1=s1*10+l1.val
+                l1=l1.next
+        
+         while l2:
+                s2=s2*10+l2.val
+                l2=l2.next
+        
+        
+         dummylist=dummy=ListNode(0)
+        
+         for i in str(s1+s2):
+                dummy.next=ListNode(i)
+                dummy=dummy.next
+        
+         return dummylist.next
